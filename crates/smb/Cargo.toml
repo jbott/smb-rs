@@ -66,7 +66,16 @@ lz4_flex = { version = "0.11", default-features = false, features = [
 test-log = "0.2"
 serial_test = "3.2"
 temp-env = { version = "0.3.6", features = ["async_closure"] }
-tokio = { workspace = true, features = ["rt", "macros"] }
+tokio = { workspace = true, features = ["rt", "rt-multi-thread", "macros"] }
+env_logger = "0.11"
+
+[[example]]
+name = "query_dir_hang"
+required-features = ["async"]
+
+[[example]]
+name = "query_dir_leak"
+required-features = ["async"]
 
 [features]
 default = ["sign", "encrypt", "compress", "async", "std-fs-impls", "netbios-transport"]

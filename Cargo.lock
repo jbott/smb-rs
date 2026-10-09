@@ -2731,6 +2731,7 @@ dependencies = [
  "ccm",
  "cmac",
  "crypto-common 0.2.2",
+ "env_logger",
  "futures",
  "futures-core",
  "futures-util",
